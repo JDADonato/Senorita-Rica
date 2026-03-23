@@ -1450,6 +1450,7 @@ const Executive = {
 
     injectSimulatedData() {
         const menu = Librarian.get('sr_menuInventory', initialMenu);
+        const popularItems = menu.filter(m => m.price !== null);
         const analytics = [];
         const now = Date.now();
         const DayMs = 24 * 60 * 60 * 1000;
